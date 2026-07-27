@@ -38,15 +38,28 @@
         },
         onStateChange: function (event) {
           if (event.data !== YT.PlayerState.ENDED) return;
-          var list = player.getPlaylist() || [];
-          var index = player.getPlaylistIndex();
-          var atEnd = list.length === 0 || index === list.length - 1;
-          if (atEnd && window.VideosEnded) {
-            window.VideosEnded.postMessage('ended');
-          }
+          handleAdvance();
+        },
+        onError: function () {
+          // This video is broken (removed, restricted, etc.) - skip it
+          // instead of getting stuck on YouTube's error card.
+          handleAdvance();
         }
       }
     });
+  }
+
+  function handleAdvance() {
+    var list = player.getPlaylist() || [];
+    var index = player.getPlaylistIndex();
+    var atEnd = list.length === 0 || index === list.length - 1;
+    if (atEnd) {
+      if (window.VideosEnded) {
+        window.VideosEnded.postMessage('ended');
+      }
+    } else {
+      player.nextVideo();
+    }
   }
 </script>
 </body>
