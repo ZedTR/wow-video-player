@@ -13,7 +13,7 @@
 <div id="player"></div>
 <script>
   var params = new URLSearchParams(window.location.search);
-  var videoId = params.get('v') || '';
+  var ids = (params.get('ids') || params.get('v') || '').split(',').filter(Boolean);
 
   var tag = document.createElement('script');
   tag.src = 'https://www.youtube.com/iframe_api';
@@ -25,17 +25,25 @@
     player = new YT.Player('player', {
       height: '100%',
       width: '100%',
-      videoId: videoId,
+      videoId: ids[0],
       playerVars: {
         autoplay: 1,
-        loop: 1,
-        playlist: videoId,
         playsinline: 1,
-        rel: 0
+        rel: 0,
+        playlist: ids.slice(1).join(',')
       },
       events: {
         onReady: function (event) {
           event.target.playVideo();
+        },
+        onStateChange: function (event) {
+          if (event.data !== YT.PlayerState.ENDED) return;
+          var list = player.getPlaylist() || [];
+          var index = player.getPlaylistIndex();
+          var atEnd = list.length === 0 || index === list.length - 1;
+          if (atEnd && window.VideosEnded) {
+            window.VideosEnded.postMessage('ended');
+          }
         }
       }
     });
