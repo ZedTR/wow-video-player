@@ -7,10 +7,21 @@
 <style>
   html, body { margin: 0; padding: 0; background: #000; height: 100%; overflow: hidden; }
   #player { position: fixed; top: 0; left: 0; width: 100%; height: 100%; }
+  #privacy-link {
+    position: fixed;
+    bottom: 4px;
+    right: 8px;
+    z-index: 10;
+    font: 10px/1.4 -apple-system, BlinkMacSystemFont, sans-serif;
+    color: rgba(255, 255, 255, 0.55);
+    text-decoration: none;
+  }
+  #privacy-link:hover { color: rgba(255, 255, 255, 0.85); }
 </style>
 </head>
 <body>
 <div id="player"></div>
+<a id="privacy-link" href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>
 <script>
   var params = new URLSearchParams(window.location.search);
   var ids = (params.get('ids') || params.get('v') || '').split(',').filter(Boolean);

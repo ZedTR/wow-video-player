@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Waiting On My Wife</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #5a5a5a;
+    --border: #e2e2e2;
+    --header-bg: #f7f7f7;
+    --link: #0060df;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14161a;
+      --fg: #eaeaea;
+      --muted: #a6a6a6;
+      --border: #2a2d33;
+      --header-bg: #1b1e24;
+      --link: #6fb1ff;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem 4rem;
+  }
+  header {
+    margin-bottom: 2rem;
+  }
+  h1 {
+    font-size: 1.6rem;
+    margin: 0 0 0.35rem;
+  }
+  .effective-date {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  h2 {
+    font-size: 1.15rem;
+    margin: 2.25rem 0 0.75rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--border);
+  }
+  p, li {
+    font-size: 0.98rem;
+  }
+  a { color: var(--link); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.75rem 0 1.25rem;
+    font-size: 0.92rem;
+  }
+  th, td {
+    text-align: left;
+    padding: 0.6rem 0.7rem;
+    border: 1px solid var(--border);
+    vertical-align: top;
+  }
+  th {
+    background: var(--header-bg);
+  }
+  ul {
+    padding-left: 1.3rem;
+  }
+  .summary-box {
+    background: var(--header-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+  }
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>Privacy Policy for Waiting On My Wife</h1>
+    <p class="effective-date">Effective date: August 2, 2026</p>
+  </header>
+
+  <p>Waiting On My Wife ("the app") is developed by an independent
+  developer ("we," "us"). This policy explains what happens to your
+  information when you use the app.</p>
+
+  <div class="summary-box">
+    <strong>Summary:</strong> The app has no backend server, no user
+    accounts, and no analytics or advertising SDKs. Everything the app
+    stores is kept on your device. The only outside services it talks to
+    are YouTube's, for playing and refreshing videos.
+  </div>
+
+  <h2>Information we collect</h2>
+  <p>We do not collect, receive, or have access to any information from
+  your use of the app. Specifically:</p>
+  <ul>
+    <li><strong>We do not operate a server.</strong> There is nothing for
+    your data to be sent to.</li>
+    <li><strong>We do not use analytics, crash reporting, or advertising
+    services.</strong></li>
+    <li><strong>We do not require or support account creation, sign-in, or
+    any personal identifiers.</strong></li>
+  </ul>
+
+  <h2>Information stored on your device</h2>
+  <p>The app stores the following data locally, on your device only:</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Data</th>
+        <th>Purpose</th>
+        <th>Where it's stored</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Wait-time tallies (per category and total)</td>
+        <td>Show your running totals on the home screen</td>
+        <td>Local device storage (<code>UserDefaults</code> on iOS /
+        <code>SharedPreferences</code> on Android), via the app's on-device
+        settings storage</td>
+      </tr>
+      <tr>
+        <td>Your response to the video-content disclaimer (accept/decline)
+        and its timestamp</td>
+        <td>Remember whether you've agreed to watch YouTube content, and
+        maintain a local log of that choice</td>
+        <td>A local file in the app's own document storage on your
+        device</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>None of this data is transmitted anywhere. It is deleted automatically
+  if you uninstall the app, and the in-app reset controls let you clear the
+  wait-time tallies at any time.</p>
+
+  <h2>Local notifications</h2>
+  <p>The app schedules reminder notifications (e.g., at 30/60/90/120
+  minutes into a wait) using your device's own notification system. These
+  are generated and scheduled entirely on-device; no notification content
+  or scheduling data is sent to us or to any third party.</p>
+
+  <h2>Third-party service: YouTube</h2>
+  <p>To provide the "watch a video while you wait" feature, the app embeds
+  YouTube's official IFrame Player and pulls public video listings from
+  YouTube channel RSS feeds. When a video loads:</p>
+  <ul>
+    <li>The video is played through <strong>YouTube's own player</strong>
+    (owned and operated by Google LLC), not by us.</li>
+    <li>YouTube/Google may collect information about that playback — such
+    as device information, IP address, cookies, and viewing activity —
+    under <strong>their own privacy policy</strong>, not ours. We do not
+    have access to this data.</li>
+    <li>We do not use the paid/authenticated YouTube Data API and do not
+    attach any personal identifiers to these requests; the RSS feeds and
+    video player are fetched anonymously, the same as visiting a public
+    YouTube page in a browser.</li>
+  </ul>
+  <p>You can review how Google/YouTube handles this data here:</p>
+  <ul>
+    <li>Google Privacy Policy:
+    <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
+    <li>YouTube Terms of Service:
+    <a href="https://www.youtube.com/t/terms">https://www.youtube.com/t/terms</a></li>
+  </ul>
+  <p>Before any video plays, the app shows a disclaimer explaining that
+  video content is pulled from YouTube, is not reviewed or controlled by
+  us, and requires your agreement to continue. You can decline, and you
+  can revisit that choice at any time from within the app.</p>
+
+  <h2>Sharing</h2>
+  <p>If you use the app's share feature, it hands off to your device's
+  native share sheet (e.g., Messages, Mail, or other apps you choose). What
+  happens to the shared content after that is governed by the destination
+  app you pick — it does not pass through us.</p>
+
+  <h2>Children's privacy</h2>
+  <p>The app is not directed to children under 13, and we do not knowingly
+  collect personal information from anyone. Because the app embeds
+  third-party YouTube content that we do not control or curate beyond
+  selecting source channels, it is not intended for use by young children
+  without parental supervision.</p>
+
+  <h2>Data retention and deletion</h2>
+  <p>Because nothing is collected or stored by us, there is nothing for us
+  to retain or delete. All app data lives on your device and is removed
+  when you clear it in-app or uninstall the app.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>We may update this policy from time to time (for example, if the
+  app's functionality changes). Changes will be posted at this same
+  location with an updated effective date.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy can be sent to:
+  <a href="mailto:zed.trzcinski@gmail.com">zed.trzcinski@gmail.com</a></p>
+
+  <footer>
+    Waiting On My Wife — Privacy Policy
+  </footer>
+
+</div>
+</body>
+</html>
